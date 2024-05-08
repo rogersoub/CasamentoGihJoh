@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+    <link rel="stylesheet" href="/_css/estilo.css">
+    <script src="/_js/logica.js" defer></script>
+</head>
+
+
+
+
+
+<!-- VOLTAR PARA O ARQUIVO ESTILO.CSS -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* fonte Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+/* Fonte  Merriweather*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    margin: 0;
+    }
+
+:root{
+    --clean:#f7f6f2;/*Criando var da cor*/
+    --dark:#000000;
+    --roxo:#6d2377;
+    --rosa:#e2988d;
+    --rsclaro:#f6d5ce;
+    --red:#d34762;
+}
+body{
+    background-image: url("/_img/fundo.PNG");
+    background-color: var(--clean);
+    width: 100%
+    
+}
+/* RODAPÉ */
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 30px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    width: 100%;
+    background-image: url("/_img/fundo.png") ;
+   /*  background: var(--clean);coloca o menu como branco*/
+    transition: all 0.5s;
+    position: fixed;
+    top: 0; /* Fixa o cabeçalho no topo da página */
+    z-index: 1000;
+}
+.menu ul{
+    display: flex;
+    text-align: center;
+    gap: 1em;/* espaços entre as linhas e colunas*/
+
+}
+.menu li{
+    background-color: var(--rsclaro);
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    cursor: pointer;
+    
+}
+.direcion{
+    font-size: 12px;
+    transition: all 0.5s;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+/*  CORPO DO SITE(section)*/
+
+/* IMAGEM 1 */
+.img1{
+    display: flex;
+    background-image: url("/_img/inicioP.jpg") ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;/* deixa ideal para a tela*/
+    background-position: center center; /*  coloca no centro*/
+    margin-left: 0px;
+    width: 100%;
+    height: 300px; /* Adicionei uma altura para ilustrar o exemplo */
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+
+}
+.corpo{
+    margin-top: 70px;
+}
+
+/* CONTAGEM REGRESSIVA  */
+ .contage{/* pega a class contage que etiver dentro da tag que tem esse id*/ 
+    float:left ;
+    margin: 5px; 
+    text-align: center; 
+    font-size: 18px;
+    box-sizing:border-box;
+    position: flex;
+    width: 15%;
+}
+h5, h6{
+    margin: 5px;
+    text-align: center;
+    font-size: 8px;
+}
+
+/* IMAGEM 2 */
+.img2{
+    display: flex;
+    background-image: url("/_img/meioP.jpeg") ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;/* deixa ideal para a tela*/
+    background-position: center center; /*  coloca no centro*/
+    margin-left: 0px;
+    width: 100%;
+    height: 300px; /* Adicionei uma altura para ilustrar o exemplo */
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+
+}
+
+/* MAPA */
+#localizacao, iframe{
+    width: 100%;
+    /* max-width:fit-content; */
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    text-align: center;
+}
+
+/* IMAGEM 3 */
+.img3{
+    display: flex;
+    background-image: url("/_img/finalP.jpeg") ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;/* deixa ideal para a tela*/
+    background-position: center center; /*  coloca no centro*/
+    margin-left: 0px;
+    width: 100%;
+    height: 300px; /* Adicionei uma altura para ilustrar o exemplo */
+
+}
+
+/* RADIOS SOME E APARECE OPCAO*/
+.custom-radio input{
+    display: none;/* tira o botão normal */
+}
+
+.custom-radio input + label:before{/* pega o input dessa classe e vai incrementar o que tem dentro do label*/
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--clean);
+    border: 1px solid gray;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+}
+.custom-radio input:checked + label:before{/* pega o input dessa classe e vai incrementar o que tem dentro do label quando selecionado*/
+    background-color: var(--clean);
+    box-sizing: border-box;
+    border: 3px solid var(--red);
+    padding: 5px;
+}
+.radio-mostra{
+    background-color: var(--rosa);
+    border-radius: 30px;
+    cursor: pointer;
+}
+.custom-radio{
+    margin-bottom: 10%;
+    font-size: 14pt;
+}
+
+/* ESCONDER ELEMENTOS DO FORMULARIO */
+
+/* CSS DO FORM */
+/* lado de fora */
+#confirma-convidado, #confirma-responsavel, .form-crianca1, .form-crianca2,
+.form-crianca3, .form-crianca4, .form-crianca5{
+    background-color: var(--clean);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 100%;/*coloca tamanho do corpo do form para ocupar 100*/
+    padding: 15%;
+    min-width: 35%;
+    box-shadow: 0 0 10px var(--dark);
+    display: none;  /*tirar depois quando fizer os botoes de crianca*/
+    margin: 15% 0;  /* coloca um espaçamento entre elas */
+    position:relative;
+    
+}
+
+
+/* cada input normal */
+.inputUser{
+    width: 100%;
+    border: 0; /* tira a borda do input */
+    outline: 0; /* tira a mudança quando clica */
+    cursor: text;/* coloca o mause como texto */
+    margin-bottom: 15%;/* coloca uma margin com os de baixo */
+    background-color: var(--clean);
+    border-bottom: 2px solid #929292;/* coloca a borda de baixo */
+    font-size: 18px;
+    padding: 2%;
+    transition: border-bottom 0.3s ease-in-out; 
+}
+
+/* cada label dos input acima */
+ .label-fora{
+    font-size: 14px;
+    left: 15%;
+    position: absolute; 
+    cursor: text;
+    color:  #929292;
+    transition: 0.3s ease-in-out;
+    margin-top: -3%;
+}
+
+/* cria mudança de cor da barra do input */
+.inputUser:focus,
+.inputUser:valid{  
+    border-bottom: 2px solid var(--rosa);
+}
+
+
+/* coloca uma transição no label */
+.inputUser:focus ~ .label-fora,
+.inputUser.valid ~ .label-fora {
+    transform: translateY(-15px);
+    font-size: 12px;
+    color: var(--red);
+}
+
+
+
+/* div que fica nula e não aparece */
+.block{
+    display: none;
+}
+
+/* botão de enviar */
+.enviar{
+    width: 100%;
+    border: 0;
+    background-image: linear-gradient(to right, var(--rosa), var(--red));
+    padding: 10px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.enviar:active{
+    background-image: linear-gradient(to right, var(--red), var(--red));
+}
+.enviar:hover{
+    background-image: linear-gradient(to right, var(--red), var(--red));
+}
+
+/* botão de adicionar criança */
+.addkid{
+    width: 100%;
+    border: 0;
+    background-image: linear-gradient(to right, var(--clean), var(--rosa));
+    padding: 10px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.addkid:active{
+    background-image: linear-gradient(to right, var(--clean), var(--rosa));
+}
+.addkid:hover{
+    background-image: linear-gradient(to right, var(--rosa), var(--rosa));
+}
+
+/* FOOTER */
+.final{
+    border-top: 1px solid black;
+}
+
+
+
+
+
+
+
+/* RESPONSIVIDADE */
+/* celulares medios*/
+@media(min-width:360px){
+    /* criando div de fundo */
+     
+ 
+     /* responsivideda imagens */
+     .img1{
+         display: relative;
+         background-image: url("/_img/inicioP.jpg") ;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;/* deixa ideal para a tela*/
+         background-position: center center; /*  coloca no centro*/
+         margin-left: 0px;
+         width: 100%;
+         height: 60rem; /* Adicionei uma altura para ilustrar o exemplo */
+     }
+ 
+     .img2{
+         display: relative;
+         background-image: url("/_img/meioP.jpeg") ;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;/* deixa ideal para a tela*/
+         background-position: center center; /*  coloca no centro*/
+         margin-left: 0px;
+         width: 100%;
+         height: 60rem; /* Adicionei uma altura para ilustrar o exemplo */
+     
+     }
+ 
+     .img3{
+         display: relative;
+         background-image: url("/_img/finalP.jpeg") ;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;/* deixa ideal para a tela*/
+         background-position: center center; /*  coloca no centro*/
+         margin-left: 0px;
+         width: 100%;
+         height: 60rem; /* Adicionei uma altura para ilustrar o exemplo que vai crescendo 100% rente */
+     
+     }
+ 
+     /* REPONSIVIDADE CONTADOR */
+     .contage{/* pega a class contage que etiver dentro da tag que tem esse id*/ 
+         margin: 2%; /*  aumentei o espaçamento */
+         font-size: 24px; /*  aumentei a fonte */
+         
+     }
+     h5, h6{
+         font-size: 13px;
+     }
+     h1{
+         font-size: 30px;
+     }
+ 
+     /* RESPONSIVIDADE DO MENU */
+    
+ 
+     /*RESPONSIVIDADE DOS RADIOS */
+     
+     
+     .custom-radio input + label:before{/* pega o input dessa classe e vai incrementar o que tem dentro do label*/
+         width: 20px;
+         height: 20px;
+         border: 2px solid gray;
+     
+     }
+     .custom-radio input:checked + label:before{/* pega o input dessa classe e vai incrementar o que tem dentro do label quando selecionado*/
+         
+         border: 5px solid var(--red);
+         padding: 7px;
+     }
+     .radio-mostra{
+         border-radius: 30px;
+     }
+     .custom-radio{
+         font-size: 18pt;
+     }
+ 
+     /* -- RESPONSIVIDADE DO FORMULARIO */
+     /* cada input normal */
+     .inputUser{
+         font-size: 24px;
+     }
+ 
+     /* cada label dos input acima */
+     .label-fora{
+         font-size: 20px;
+     }
+ 
+     /* cria mudança de cor da barra do input */
+     .inputUser:focus,
+     .inputUser:valid{  
+         border-bottom: 2px solid var(--rosa);
+     }
+ 
+ 
+     /* coloca uma transição no label */
+     .inputUser:focus ~ .label-fora,
+     .inputUser.valid ~ .label-fora {
+         font-size: 18px;
+     }
+     
+      
+ }
+
+
+
+
+
+
+
+
+ 
+ /* celulares maiores, tablets e computadores */
+@media(min-width:418px){
+    /* riando div de fundo */
+     div#desktop {
+         width: 1000px;
+         /*largura da página central*/
+         /* background-color: blue; */
+         background-image: url("/_img/fundo.PNG");
+         margin: -20px auto 0px auto;  /*cima, esquerda, baixo */
+         box-shadow: px 0px 10px rgba(0, 0, 0, .5);
+         padding: 10px 10px 10px 10px;
+     }
+ 
+     /* responsivideda imagens */
+     .img1{
+         display: relative;
+         background-image: url("/_img/inicioP.jpg") ;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;/* deixa ideal para a tela*/
+         background-position: center center; /*  coloca no centro*/
+         margin-left: 0px;
+         width: 100%;
+         height: 100rem; /* Adicionei uma altura para ilustrar o exemplo */
+     }
+ 
+     .img2{
+         display: relative;
+         background-image: url("/_img/meioP.jpeg") ;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;/* deixa ideal para a tela*/
+         background-position: center center; /*  coloca no centro*/
+         margin-left: 0px;
+         width: 100%;
+         height: 100rem; /* Adicionei uma altura para ilustrar o exemplo */
+     
+     }
+ 
+     .img3{
+         display: relative;
+         background-image: url("/_img/finalP.jpeg") ;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;/* deixa ideal para a tela*/
+         background-position: center center; /*  coloca no centro*/
+         margin-left: 0px;
+         width: 100%;
+         height: 100rem; /* Adicionei uma altura para ilustrar o exemplo que vai crescendo 100% rente */
+     
+     }
+ 
+     /* REPONSIVIDADE CONTADOR */
+     .contage{/* pega a class contage que etiver dentro da tag que tem esse id*/ 
+         margin: 15px; /*  aumentei o espaçamento */
+         font-size: 38px; /*  aumentei a fonte */
+         
+     }
+     h5, h6{
+         font-size: 30px;
+     }
+     h1{
+         font-size: 50px;
+     }
+ 
+     /* RESPONSIVIDADE DO MENU */
+     
+     .menu ul{
+         gap: 5em;
+     }
+ 
+     .menu li{
+         padding: 10px;
+     }
+     .direcion{
+         font-size: 30px;
+     }
+ 
+     /*RESPONSIVIDADE DOS RADIOS */
+     
+     
+     .custom-radio input + label:before{/* pega o input dessa classe e vai incrementar o que tem dentro do label*/
+         width: 34px;
+         height: 34px;
+         border: 2px solid gray;
+     
+     }
+     .custom-radio input:checked + label:before{/* pega o input dessa classe e vai incrementar o que tem dentro do label quando selecionado*/
+         
+         border: 5px solid var(--red);
+         padding: 14px;
+     }
+     .radio-mostra{
+         border-radius: 30px;
+     }
+     .custom-radio{
+         font-size: 30pt;
+     }
+ 
+     /* -- RESPONSIVIDADE DO FORMULARIO */
+     /* cada input normal */
+     .inputUser{
+         width: 100%;
+         border: 0; /* tira a borda do input */
+         outline: 0; /* tira a mudança quando clica */
+         cursor: text;/* coloca o mause como texto */
+         margin-bottom: 15%;/* coloca uma margin com os de baixo */
+         background-color: var(--clean);
+         border-bottom: 2px solid #929292;/* coloca a borda de baixo */
+         font-size: 28px;
+         padding: 2%;
+         transition: border-bottom 0.3s ease-in-out; 
+     }
+ 
+     /* cada label dos input acima */
+     .label-fora{
+         font-size: 22px;
+     }
+ 
+     /* cria mudança de cor da barra do input */
+     .inputUser:focus,
+     .inputUser:valid{  
+         border-bottom: 2px solid var(--rosa);
+     }
+ 
+ 
+     /* coloca uma transição no label */
+     .inputUser:focus ~ .label-fora,
+     .inputUser.valid ~ .label-fora {
+         font-size: 20px;
+     }
+
+     .enviar{
+        font-size:25px;
+        padding: 12px;
+     }
+     .addkid{
+        font-size:25px;
+        padding: 12px;
+     }
+     
+      
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+ /* tablets */
+@media(min-width:760px) and (max-width:1200px){
+    /* riando div de fundo */
+     div#desktop {
+         width: 100%;
+         /*largura da página central*/
+         /* background-color: blue; */
+         background-image: url("/_img/fundo.PNG");
+         margin: -20px auto 0px auto;  /*cima, esquerda, baixo */
+         box-shadow: px 0px 10px rgba(0, 0, 0, .5);
+         padding: 10px 10px 10px 10px;
+     }
+ 
+     /* responsivideda imagens */
+     .img1{
+         display: relative;
+         background-image: url("/_img/inicioP.jpg") ;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;/* deixa ideal para a tela*/
+         background-position: center center; /*  coloca no centro*/
+         margin-left: 0px;
+         width: 100%;
+         height: 100rem; /* Adicionei uma altura para ilustrar o exemplo */
+     }
+ 
+     .img2{
+         display: relative;
+         background-image: url("/_img/meioP.jpeg") ;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;/* deixa ideal para a tela*/
+         background-position: center center; /*  coloca no centro*/
+         margin-left: 0px;
+         width: 100%;
+         height: 100rem; /* Adicionei uma altura para ilustrar o exemplo */
+     
+     }
+ 
+     .img3{
+         display: relative;
+         background-image: url("/_img/finalP.jpeg") ;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;/* deixa ideal para a tela*/
+         background-position: center center; /*  coloca no centro*/
+         margin-left: 0px;
+         width: 100%;
+         height: 100rem; /* Adicionei uma altura para ilustrar o exemplo que vai crescendo 100% rente */
+     
+     }
+ 
+     /* REPONSIVIDADE CONTADOR */
+     .contage{/* pega a class contage que etiver dentro da tag que tem esse id*/ 
+         margin: 15px; /*  aumentei o espaçamento */
+         font-size: 38px; /*  aumentei a fonte */
+         
+     }
+     h5, h6{
+         font-size: 30px;
+     }
+     h1{
+         font-size: 50px;
+     }
+ 
+     /* RESPONSIVIDADE DO MENU */
+     
+     .menu ul{
+         gap: 5em;
+     }
+ 
+     .menu li{
+         padding: 10px;
+     }
+     .direcion{
+         font-size: 30px;
+     }
+ 
+     /*RESPONSIVIDADE DOS RADIOS */
+     
+     
+     .custom-radio input + label:before{/* pega o input dessa classe e vai incrementar o que tem dentro do label*/
+         width: 34px;
+         height: 34px;
+         border: 2px solid gray;
+     
+     }
+     .custom-radio input:checked + label:before{/* pega o input dessa classe e vai incrementar o que tem dentro do label quando selecionado*/
+         
+         border: 5px solid var(--red);
+         padding: 14px;
+     }
+     .radio-mostra{
+         border-radius: 30px;
+     }
+     .custom-radio{
+         font-size: 30pt;
+     }
+ 
+     /* -- RESPONSIVIDADE DO FORMULARIO */
+     /* cada input normal */
+     .inputUser{
+         width: 100%;
+         border: 0; /* tira a borda do input */
+         outline: 0; /* tira a mudança quando clica */
+         cursor: text;/* coloca o mause como texto */
+         margin-bottom: 15%;/* coloca uma margin com os de baixo */
+         background-color: var(--clean);
+         border-bottom: 2px solid #929292;/* coloca a borda de baixo */
+         font-size: 28px;
+         padding: 2%;
+         transition: border-bottom 0.3s ease-in-out; 
+     }
+ 
+     /* cada label dos input acima */
+     .label-fora{
+         font-size: 22px;
+     }
+ 
+     /* cria mudança de cor da barra do input */
+     .inputUser:focus,
+     .inputUser:valid{  
+         border-bottom: 2px solid var(--rosa);
+     }
+ 
+ 
+     /* coloca uma transição no label */
+     .inputUser:focus ~ .label-fora,
+     .inputUser.valid ~ .label-fora {
+         font-size: 20px;
+     }
+     
+      
+ }
+
+</style>
+<!-- VOLTAR PARA O ARQUIVO ESTILO.CSS -->
+
+
+
+
+
+
+<body>
+    
+        <!-- cabeçalho -->
+        <header class="menu" id="menu">
+            <nav class="nav">
+                <ul>
+                    <li><a href="#formulario" class="direcion">Confirmar presença</a></li>
+                    <li><a href="#localizacao" class="direcion" style="margin-bottom: auto; margin-top: 5px;">Local do
+                        Evento</a></li>
+                    <li><a href="/sobre.html" class="direcion">Sobre o Casal</a></li>
+                </ul>
+            </nav>
+        </header>
+    <div id="desktop">
+        <!-- principal -->
+        <section class="corpo">
+            <!-- IMAGEM 1 -->
+            <div class="img1">
+            </div>
+            <!-- FIM IMAGEM 1 COMEÇO CONTAGEM -->
+            
+            <h1>Dias Contados...</h1>
+                <span id="contReg">
+                    <div class="contage">
+                        <h5>MESES</h5>
+                        <span id="meses">0</span>
+                    </div>
+
+                    <div class="contage">
+                        <h5>DIAS</h5>
+                        <span id="dias">0</span>
+                    </div>
+
+                    <div class="contage">
+                        <h5>HORAS</h5>
+                        <span id="horas">0</span>
+                    </div>
+
+                    <div class="contage">
+                        <h5>MINUTOS</h5>
+                        <span id="minutos">0</span>
+                    </div>
+
+                    <div class="contage">
+                        <h6>SEGUNDOS</h6>
+                        <span id="segundos">0</span>
+                    </div>
+                </span>
+
+                <!-- IMAGEM 2 -->
+            <div class="img2"></div>
+            <!-- FIM IMAGEM 2 COMEÇO MAPA-->
+            <div id="localizacao">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.955937309401!2d-44.027195925863346!3d-19.84181723556647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6922bffec2dd9%3A0x44f620e7294eda1c!2sCh%C3%A1cara%20Nogueira!5e0!3m2!1spt-BR!2sbr!4v1709126372425!5m2!1spt-BR!2sbr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <!-- FIM MAPA -->
+            <!-- O QUE FALTA -->
+            
+            <!-- IMAGEM 3 -->
+            <div class="img3">
+            </div>
+            <!-- FIM IMAGEM 3 COMECO CONFIRMA -->
+            <!-- BOTÃO RADIO DE APARECER -->
+            <div class="custom-radio" id="formulario">
+                <h1>Clique na sua opção</h1>
+                <br>
+                <input type="radio" name="crianca" value="REScrianca" id="REScrianca" oninput="Tipo()">
+                <label for="REScrianca" class="radio-mostra">Responsável de criança</label>
+            </div>
+
+            <div class="custom-radio">
+                <input type="radio" name="crianca" value="convidado" id="convidado" oninput="Tipo()">
+                <label for="convidado" class="radio-mostra">Convidado(a)</label><!-- o php vai ler os names como o mesmo, mas o value é diferente-->
+            </div>
+            <br><br>
+            <!-- CADASTRO CONVIDADO NORMAL -->
+            <div id="confirma-convidado" class="divs-troca">
+                <form action="cadastroC.php" method="POST">
+                    <!-- COLOQUE -->
+                    <div id="Fconvidado">
+                        <!-- CONFIRMA SE VAI OU NÃO -->
+                        <div class="custom-radio">
+                            <h1>Você vai no evento?</h1>
+                            <br>
+                            <input type="radio" name="confirmaC" value="sim" id="confirmaCsim">
+                            <label for="confirmaCsim" class="radio-mostra">Sim</label>
+                        </div>
+            
+                        <div class="custom-radio">
+                            <input type="radio" name="confirmaC" value="não" id="confirmaCnao">
+                            <label for="confirmaCnao"class="radio-mostra">Não</label><!-- o php vai ler os names como o mesmo, mas o value é diferente-->
+                        </div>
+                        <!-- INPUTS NORMAIS -->
+                        <!-- não tira esse -->
+                        <div class="block">
+                            <label for="" class="label-fora">Nome Completo</label>
+                            <input type="text" id="" name="" class="inputUser">
+                        </div>
+
+                                <!-- ESSSE É O QUE APARECE -->
+                        <div class="input-normal">
+                            <input type="text" id="nome" name="nome" class="inputUser" required>
+                            <label for="nome" class="label-fora">Nome Completo</label>
+                        </div>
+
+                        <div class="input-normal">
+                            <input type="number" id="idade" name="idade" class="inputUser" required>
+                            <label for="idade" class="label-fora">Idade</label>
+                        </div>
+
+                        <div class="input-normal">
+                            <input type="email" id="email" name="email" class="inputUser" required>
+                            <label for="email" class="label-fora">E-mail</label>
+                        </div>
+
+                        <div class="input-normal">
+                            <input type="tel" id="numero" name="telefone" class="inputUser" required>
+                            <label for="numero" class="label-fora">Número de Telefone</label>
+                        </div>
+
+                        <input type="submit" name="submit" value="Enviar" class="enviar">
+
+                    </div>
+                </form>
+            </div>
+
+            <!-- CONFIRMA  DE RESPONSAVEL-->
+            <div id="confirma-responsavel" class="divs-troca">
+                <form action="cadastroR.php" method="POST">
+                    
+                    <!-- FORMULARIO DO RESPONSAVEL-->
+                    <div id="FREPcrianca">
+                        <!-- FALA SE VAI -->
+                        <div class="custom-radio">
+                            <h1>Você vai no evento?</h1>
+                            <br>
+                            <input type="radio" name="confirmaR" value="sim" id="confirmaRsim" required>
+                            <label for="confirmaRsim" class="radio-mostra">Sim</label>
+                        </div>
+            
+                        <div class="custom-radio">
+                            <input type="radio" name="confirmaR" value="não" id="confirmaRnao" required>
+                            <label for="confirmaRnao"class="radio-mostra">Não</label><!-- o php vai ler os names como o mesmo, mas o value é diferente-->
+                        </div>
+
+                        <!-- INPUTS NORMAIS -->
+                        <!-- NÃO TIRA ESSA DIV -->
+                        <div class="block">
+                            <label for="" class="label-fora">Nome Completo</label>
+                            <input type="text" id="" name="" class="inputUser">
+                        </div>
+                        
+                        <div class="input-normal">
+                            <input type="text" id="nomeR" name="nomeR" class="inputUser" required>
+                            <label for="nomeR" class="label-fora">Nome Completo</label>
+                        </div>
+                        
+                        <div class="input-normal">
+                            <input type="number" id="idadeR" name="idadeR" class="inputUser" required>
+                            <label for="idadeR" class="label-fora">Idade</label>
+                        </div>
+                        
+                        <div class="input-normal">
+                            <input type="email" id="emailR" name="emailR" class="inputUser" required>
+                            <label for="emailR" class="label-fora">E-mail</label>
+                        </div>
+                        
+                        <div class="input-normal">
+                            <input type="tel" id="telefoneR" name="telefoneR" class="inputUser" required>
+                            <label for="telefoneR" class="label-fora">Número de Telefone</label>
+                        </div>
+
+                    </div>
+
+                    <!-- ACABA DIV CONFIRMA REPRESENTANTE E COMEÇA DA CRIANÇA 1 -->
+                   
+                    <div class="form-crianca1" id="form-crianca1">
+                        <h1>Criança 1</h1>
+                        <!-- INPUT QUE NÃO APARECE -->
+                        <div class="block">
+                            <label for="" class="label-fora">Nome</label>
+                            <input type="text" id="" name="" class="inputUser">
+                        </div>
+                            <!-- INPUTS QUE APARECEM -->
+                        <div class="input-normal">
+                            <input type="text" id="nomec1" name="nomec1" class="inputUser" required>
+                            <label for="nomec1" class="label-fora">Nome</label>
+                        </div>
+
+                        <div class="input-normal">
+                            <input type="number" id="idadec1" name="idadec1" class="inputUser" required>
+                            <label for="idadec1" class="label-fora">Idade</label>
+                        </div>
+                        
+                       
+                        <h3>OU</h3>
+                        <button class="addkid"  id="addkid2">Adicionar Criança 2</button>
+                    </div>
+
+                    <!-- CRIANÇA 2 -->
+                    <div class="form-crianca2" id="form-crianca2">
+                        <h1>Criança 2</h1>
+                            <!-- INPUT QUE NÃO APARECE -->
+                        <div class="block">
+                            <label for="" class="label-fora">Nome</label>
+                            <input type="text" id="" name="" class="inputUser">
+                        </div>
+
+                            <!-- INPUTS QUE APARECEM -->
+                        <div class="input-normal">
+                            <input type="text" id="nomec2" name="nomec2" class="inputUser inputRequired">
+                            <label for="nomec2" class="label-fora">Nome</label>
+                        </div>
+
+                        <div class="input-normal">
+                            <input type="number" id="idadec2"  name="idadec2" class="inputUser inputRequired">
+                            <label for="idadec2" class="label-fora">Idade</label>
+                        </div>
+
+                        <button class="addkid" id="addkid3">Adicionar Criança 3</button>
+                    </div>
+
+                    <!-- CRIANÇA 3 -->
+                    <div class="form-crianca3" id="form-crianca3">
+                        <h1>Criança 3</h1>
+                        <!-- INPUT QUE NÃO APARECE -->
+                        <div class="block">
+                            <label for="" class="label-fora">Nome</label>
+                            <input type="text" id="" name="" class="inputUser">
+                        </div>
+
+                            <!-- INPUTS QUE APARECEM -->
+                        <div class="input-normal">
+                            <input type="text" id="nomec3" name="idadec3" class="inputUser inputRequired">
+                            <label for="nomec3" class="label-fora">Nome</label>
+                        </div>
+
+                        <div class="input-normal">
+                            <input type="number" id="idadec3"  name="idadec3" class="inputUser inputRequired">
+                            <label for="idadec3" class="label-fora">Idade</label>
+                        </div>
+
+                        <button class="addkid" id="addkid4" >Adicionar Criança 4</button>
+                    </div>
+
+                    <!-- CRIANÇA 4 -->
+                    <div class="form-crianca4" id="form-crianca4">
+                        <h1>Criança 4</h1>
+                        <!-- INPUT QUE NÃO APARECE -->
+                        <div class="block">
+                            <label for="" class="label-fora">Nome</label>
+                            <input type="text" id="" name="" class="inputUser">
+                        </div>
+
+                            <!-- INPUTS QUE APARECEM -->
+                        <div class="input-normal">
+                            <input type="text" id="nomec4" class="inputUser inputRequired">
+                            <label for="nomec4" class="label-fora">Nome</label>
+                        </div>
+
+                        <div class="input-normal">
+                            <input type="number" id="idadec4"  name="idadec4" class="inputUser inputRequired">
+                            <label for="idadec4" class="label-fora">Idade</label>
+                        </div>
+
+                        <button class="addkid" id="addkid5">Adicionar Criança 5</button>
+                    </div>
+
+                    <!-- CRIANÇA 5 -->
+                    <div class="form-crianca5" id="form-crianca5">
+                        <h1>Criança 5</h1>
+                        <!-- INPUT QUE NÃO APARECE -->
+                        <div class="block">
+                            <label for="" class="label-fora">Nome</label>
+                            <input type="text" id="" name="" class="inputUser">
+                        </div>
+
+                            <!-- INPUTS QUE APARECEM -->
+
+                        <div class="input-normal">
+                            <input type="text" id="nomec5"  name="idadec5" class="inputUser inputRequired">
+                            <label for="nomec5" class="label-fora">Nome</label>
+                        </div>
+
+                        <div class="input-normal">
+                            <input type="number" id="idadec5"  name="idadec5" class="inputUser inputRequired" >
+                            <label for="idadec5" class="label-fora">Idade</label>
+                        </div>
+                        
+                    </div>
+
+                    <input type="submit" name="submitR" value="Enviar Formulario" class="enviar">
+
+                </form>
+            </div>
+
+        </section>
+    </div>
+
+     <!-- rodapé -->
+        <footer class="final">
+            <h4>Desenvolvido por:</h4>
+            <P>Roger Souza Brandão</p>
+            <p>rogersoubrand1a@gmail.com</P>
+        </footer>
+    
+</body>
+
+</html>

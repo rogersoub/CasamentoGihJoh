@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* fonte Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+/* Fonte  Merriweather*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    margin: 0;
+    }
+
+:root{
+    --clean:#f7f6f2;/*Criando var da cor*/
+    --dark:#000000;
+    --roxo:#6d2377;
+    --rosa:#e2988d;
+    --rsclaro:#f6d5ce;
+    --red:#d34762;
+}
+body{
+    background-image: url("/_img/fundo.PNG");
+    background-color: var(--clean);
+    width: 100%
+    
+}
+/* RODAPÉ */
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 30px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    width: 100%;
+    background-image: url("/_img/fundo.png") ;
+   /*  background: var(--clean);coloca o menu como branco*/
+    transition: all 0.5s;
+    position: fixed;
+    top: 0; /* Fixa o cabeçalho no topo da página */
+    z-index: 1000;
+}
+.menu ul{
+    display: flex;
+    text-align: center;
+    gap: 1em;/* espaços entre as linhas e colunas*/
+
+}
+.menu li{
+    background-color: var(--rsclaro);
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    cursor: pointer;
+    
+}
+.direcion{
+    font-size: 12px;
+    transition: all 0.5s;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+/*  CORPO DO SITE(section)*/
+
+/* IMAGEM 1 */
+.img1{
+    display: flex;
+    background-image: url("/_img/inicioP.jpg") ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;/* deixa ideal para a tela*/
+    background-position: center center; /*  coloca no centro*/
+    margin-left: 0px;
+    width: 100%;
+    height: 300px; /* Adicionei uma altura para ilustrar o exemplo */
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+
+}
+.corpo{
+    margin-top: 70px;
+}
+
+/* CONTAGEM REGRESSIVA  */
+ .contage{/* pega a class contage que etiver dentro da tag que tem esse id*/ 
+    float:left ;
+    margin: 5px; 
+    text-align: center; 
+    font-size: 18px;
+    box-sizing:border-box;
+    position: flex;
+    width: 15%;
+}
+h5, h6{
+    margin: 5px;
+    text-align: center;
+    font-size: 8px;
+}
+
+/* IMAGEM 2 */
+.img2{
+    display: flex;
+    background-image: url("/_img/meioP.jpeg") ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;/* deixa ideal para a tela*/
+    background-position: center center; /*  coloca no centro*/
+    margin-left: 0px;
+    width: 100%;
+    height: 300px; /* Adicionei uma altura para ilustrar o exemplo */
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+
+}
+
+/* MAPA */
+#localizacao, iframe{
+    width: 100%;
+    /* max-width:fit-content; */
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    text-align: center;
+}
+
+/* IMAGEM 3 */
+.img3{
+    display: flex;
+    background-image: url("/_img/finalP.jpeg") ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;/* deixa ideal para a tela*/
+    background-position: center center; /*  coloca no centro*/
+    margin-left: 0px;
+    width: 100%;
+    height: 300px; /* Adicionei uma altura para ilustrar o exemplo */
+
+}
+
+/* RADIOS SOME E APARECE OPCAO*/
+.custom-radio input{
+    display: none;/* tira o botão normal */
+}
+
+.custom-radio input + label:before{/* pega o input dessa classe e vai incrementar o que tem dentro do label*/
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--clean);
+    border: 1px solid gray;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+}
+.custom-radio input:checked + label:before{/* pega o input dessa classe e vai incrementar o que tem dentro do label quando selecionado*/
+    background-color: var(--clean);
+    box-sizing: border-box;
+    border: 3px solid var(--red);
+    padding: 5px;
+}
+.radio-mostra{
+    background-color: var(--rosa);
+    border-radius: 30px;
+    cursor: pointer;
+}
+.custom-radio{
+    margin-bottom: 10%;
+    font-size: 14pt;
+}
+
+/* ESCONDER ELEMENTOS DO FORMULARIO */
+
+/* CSS DO FORM */
+/* lado de fora */
+#confirma-convidado, #confirma-responsavel, .form-crianca1, .form-crianca2,
+.form-crianca3, .form-crianca4, .form-crianca5{
+    background-color: var(--clean);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 100%;/*coloca tamanho do corpo do form para ocupar 100*/
+    padding: 15%;
+    min-width: 35%;
+    box-shadow: 0 0 10px var(--dark);
+    display: none;  /*tirar depois quando fizer os botoes de crianca*/
+    margin: 15% 0;  /* coloca um espaçamento entre elas */
+    position:relative;
+    
+}
+
+
+/* cada input normal */
+.inputUser{
+    width: 100%;
+    border: 0; /* tira a borda do input */
+    outline: 0; /* tira a mudança quando clica */
+    cursor: text;/* coloca o mause como texto */
+    margin-bottom: 15%;/* coloca uma margin com os de baixo */
+    background-color: var(--clean);
+    border-bottom: 2px solid #929292;/* coloca a borda de baixo */
+    font-size: 18px;
+    padding: 2%;
+    transition: border-bottom 0.3s ease-in-out; 
+}
+
+/* cada label dos input acima */
+ .label-fora{
+    font-size: 14px;
+    left: 15%;
+    position: absolute; 
+    cursor: text;
+    color:  #929292;
+    transition: 0.3s ease-in-out;
+    margin-top: -3%;
+}
+
+/* cria mudança de cor da barra do input */
+.inputUser:focus,
+.inputUser:valid{  
+    border-bottom: 2px solid var(--rosa);
+}
+
+
+/* coloca uma transição no label */
+.inputUser:focus ~ .label-fora,
+.inputUser.valid ~ .label-fora {
+    transform: translateY(-15px);
+    font-size: 12px;
+    color: var(--red);
+}
+
+
+
+/* div que fica nula e não aparece */
+.block{
+    display: none;
+}
+
+/* botão de enviar */
+.enviar{
+    width: 100%;
+    border: 0;
+    background-image: linear-gradient(to right, var(--rosa), var(--red));
+    padding: 10px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.enviar:active{
+    background-image: linear-gradient(to right, var(--red), var(--red));
+}
+.enviar:hover{
+    background-image: linear-gradient(to right, var(--red), var(--red));
+}
+
+/* botão de adicionar criança */
+.addkid{
+    width: 100%;
+    border: 0;
+    background-image: linear-gradient(to right, var(--clean), var(--rosa));
+    padding: 10px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.addkid:active{
+    background-image: linear-gradient(to right, var(--clean), var(--rosa));
+}
+.addkid:hover{
+    background-image: linear-gradient(to right, var(--rosa), var(--rosa));
+}
+
+/* FOOTER */
+.final{
+    border-top: 1px solid black;
+}
+
+
+
+
+
+
+
+/* RESPONSIVIDADE */
+/* celulares medios*/
+@media(min-width:360px){
+    /* criando div de fundo */
+     
+ 
+     /* responsivideda imagens */
+     .img1{
+         display: relative;
+         background-image: url("/_img/inicioP.jpg") ;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;/* deixa ideal para a tela*/
+         background-position: center center; /*  coloca no centro*/
+         margin-left: 0px;
+         width: 100%;
+         height: 60rem; /* Adicionei uma altura para ilustrar o exemplo */
+     }
+ 
+     .img2{
+         display: relative;
+         background-image: url("/_img/meioP.jpeg") ;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;/* deixa ideal para a tela*/
+         background-position: center center; /*  coloca no centro*/
+         margin-left: 0px;
+         width: 100%;
+         height: 60rem; /* Adicionei uma altura para ilustrar o exemplo */
+     
+     }
+ 
+     .img3{
+         display: relative;
+         background-image: url("/_img/finalP.jpeg") ;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;/* deixa ideal para a tela*/
+         background-position: center center; /*  coloca no centro*/
+         margin-left: 0px;
+         width: 100%;
+         height: 60rem; /* Adicionei uma altura para ilustrar o exemplo que vai crescendo 100% rente */
+     
+     }
+ 
+     /* REPONSIVIDADE CONTADOR */
+     .contage{/* pega a class contage que etiver dentro da tag que tem esse id*/ 
+         margin: 2%; /*  aumentei o espaçamento */
+         font-size: 24px; /*  aumentei a fonte */
+         
+     }
+     h5, h6{
+         font-size: 13px;
+     }
+     h1{
+         font-size: 30px;
+     }
+ 
+     /* RESPONSIVIDADE DO MENU */
+    
+ 
+     /*RESPONSIVIDADE DOS RADIOS */
+     
+     
+     .custom-radio input + label:before{/* pega o input dessa classe e vai incrementar o que tem dentro do label*/
+         width: 20px;
+         height: 20px;
+         border: 2px solid gray;
+     
+     }
+     .custom-radio input:checked + label:before{/* pega o input dessa classe e vai incrementar o que tem dentro do label quando selecionado*/
+         
+         border: 5px solid var(--red);
+         padding: 7px;
+     }
+     .radio-mostra{
+         border-radius: 30px;
+     }
+     .custom-radio{
+         font-size: 18pt;
+     }
+ 
+     /* -- RESPONSIVIDADE DO FORMULARIO */
+     /* cada input normal */
+     .inputUser{
+         font-size: 24px;
+     }
+ 
+     /* cada label dos input acima */
+     .label-fora{
+         font-size: 20px;
+     }
+ 
+     /* cria mudança de cor da barra do input */
+     .inputUser:focus,
+     .inputUser:valid{  
+         border-bottom: 2px solid var(--rosa);
+     }
+ 
+ 
+     /* coloca uma transição no label */
+     .inputUser:focus ~ .label-fora,
+     .inputUser.valid ~ .label-fora {
+         font-size: 18px;
+     }
+     
+      
+ }
+
+
+
+
+
+
+
+
+ 
+ /* celulares maiores, tablets e computadores */
+@media(min-width:418px){
+    /* riando div de fundo */
+     div#desktop {
+         width: 1000px;
+         /*largura da página central*/
+         /* background-color: blue; */
+         background-image: url("/_img/fundo.PNG");
+         margin: -20px auto 0px auto;  /*cima, esquerda, baixo */
+         box-shadow: px 0px 10px rgba(0, 0, 0, .5);
+         padding: 10px 10px 10px 10px;
+     }
+ 
+     /* responsivideda imagens */
+     .img1{
+         display: relative;
+         background-image: url("/_img/inicioP.jpg") ;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;/* deixa ideal para a tela*/
+         background-position: center center; /*  coloca no centro*/
+         margin-left: 0px;
+         width: 100%;
+         height: 100rem; /* Adicionei uma altura para ilustrar o exemplo */
+     }
+ 
+     .img2{
+         display: relative;
+         background-image: url("/_img/meioP.jpeg") ;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;/* deixa ideal para a tela*/
+         background-position: center center; /*  coloca no centro*/
+         margin-left: 0px;
+         width: 100%;
+         height: 100rem; /* Adicionei uma altura para ilustrar o exemplo */
+     
+     }
+ 
+     .img3{
+         display: relative;
+         background-image: url("/_img/finalP.jpeg") ;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;/* deixa ideal para a tela*/
+         background-position: center center; /*  coloca no centro*/
+         margin-left: 0px;
+         width: 100%;
+         height: 100rem; /* Adicionei uma altura para ilustrar o exemplo que vai crescendo 100% rente */
+     
+     }
+ 
+     /* REPONSIVIDADE CONTADOR */
+     .contage{/* pega a class contage que etiver dentro da tag que tem esse id*/ 
+         margin: 15px; /*  aumentei o espaçamento */
+         font-size: 38px; /*  aumentei a fonte */
+         
+     }
+     h5, h6{
+         font-size: 30px;
+     }
+     h1{
+         font-size: 50px;
+     }
+ 
+     /* RESPONSIVIDADE DO MENU */
+     
+     .menu ul{
+         gap: 5em;
+     }
+ 
+     .menu li{
+         padding: 10px;
+     }
+     .direcion{
+         font-size: 30px;
+     }
+ 
+     /*RESPONSIVIDADE DOS RADIOS */
+     
+     
+     .custom-radio input + label:before{/* pega o input dessa classe e vai incrementar o que tem dentro do label*/
+         width: 34px;
+         height: 34px;
+         border: 2px solid gray;
+     
+     }
+     .custom-radio input:checked + label:before{/* pega o input dessa classe e vai incrementar o que tem dentro do label quando selecionado*/
+         
+         border: 5px solid var(--red);
+         padding: 14px;
+     }
+     .radio-mostra{
+         border-radius: 30px;
+     }
+     .custom-radio{
+         font-size: 30pt;
+     }
+ 
+     /* -- RESPONSIVIDADE DO FORMULARIO */
+     /* cada input normal */
+     .inputUser{
+         width: 100%;
+         border: 0; /* tira a borda do input */
+         outline: 0; /* tira a mudança quando clica */
+         cursor: text;/* coloca o mause como texto */
+         margin-bottom: 15%;/* coloca uma margin com os de baixo */
+         background-color: var(--clean);
+         border-bottom: 2px solid #929292;/* coloca a borda de baixo */
+         font-size: 28px;
+         padding: 2%;
+         transition: border-bottom 0.3s ease-in-out; 
+     }
+ 
+     /* cada label dos input acima */
+     .label-fora{
+         font-size: 22px;
+     }
+ 
+     /* cria mudança de cor da barra do input */
+     .inputUser:focus,
+     .inputUser:valid{  
+         border-bottom: 2px solid var(--rosa);
+     }
+ 
+ 
+     /* coloca uma transição no label */
+     .inputUser:focus ~ .label-fora,
+     .inputUser.valid ~ .label-fora {
+         font-size: 20px;
+     }
+
+     .enviar{
+        font-size:25px;
+        padding: 12px;
+     }
+     .addkid{
+        font-size:25px;
+        padding: 12px;
+     }
+     
+      
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+ /* tablets */
+@media(min-width:760px) and (max-width:1200px){
+    /* riando div de fundo */
+     div#desktop {
+         width: 100%;
+         /*largura da página central*/
+         /* background-color: blue; */
+         background-image: url("/_img/fundo.PNG");
+         margin: -20px auto 0px auto;  /*cima, esquerda, baixo */
+         box-shadow: px 0px 10px rgba(0, 0, 0, .5);
+         padding: 10px 10px 10px 10px;
+     }
+ 
+     /* responsivideda imagens */
+     .img1{
+         display: relative;
+         background-image: url("/_img/inicioP.jpg") ;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;/* deixa ideal para a tela*/
+         background-position: center center; /*  coloca no centro*/
+         margin-left: 0px;
+         width: 100%;
+         height: 100rem; /* Adicionei uma altura para ilustrar o exemplo */
+     }
+ 
+     .img2{
+         display: relative;
+         background-image: url("/_img/meioP.jpeg") ;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;/* deixa ideal para a tela*/
+         background-position: center center; /*  coloca no centro*/
+         margin-left: 0px;
+         width: 100%;
+         height: 100rem; /* Adicionei uma altura para ilustrar o exemplo */
+     
+     }
+ 
+     .img3{
+         display: relative;
+         background-image: url("/_img/finalP.jpeg") ;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;/* deixa ideal para a tela*/
+         background-position: center center; /*  coloca no centro*/
+         margin-left: 0px;
+         width: 100%;
+         height: 100rem; /* Adicionei uma altura para ilustrar o exemplo que vai crescendo 100% rente */
+     
+     }
+ 
+     /* REPONSIVIDADE CONTADOR */
+     .contage{/* pega a class contage que etiver dentro da tag que tem esse id*/ 
+         margin: 15px; /*  aumentei o espaçamento */
+         font-size: 38px; /*  aumentei a fonte */
+         
+     }
+     h5, h6{
+         font-size: 30px;
+     }
+     h1{
+         font-size: 50px;
+     }
+ 
+     /* RESPONSIVIDADE DO MENU */
+     
+     .menu ul{
+         gap: 5em;
+     }
+ 
+     .menu li{
+         padding: 10px;
+     }
+     .direcion{
+         font-size: 30px;
+     }
+ 
+     /*RESPONSIVIDADE DOS RADIOS */
+     
+     
+     .custom-radio input + label:before{/* pega o input dessa classe e vai incrementar o que tem dentro do label*/
+         width: 34px;
+         height: 34px;
+         border: 2px solid gray;
+     
+     }
+     .custom-radio input:checked + label:before{/* pega o input dessa classe e vai incrementar o que tem dentro do label quando selecionado*/
+         
+         border: 5px solid var(--red);
+         padding: 14px;
+     }
+     .radio-mostra{
+         border-radius: 30px;
+     }
+     .custom-radio{
+         font-size: 30pt;
+     }
+ 
+     /* -- RESPONSIVIDADE DO FORMULARIO */
+     /* cada input normal */
+     .inputUser{
+         width: 100%;
+         border: 0; /* tira a borda do input */
+         outline: 0; /* tira a mudança quando clica */
+         cursor: text;/* coloca o mause como texto */
+         margin-bottom: 15%;/* coloca uma margin com os de baixo */
+         background-color: var(--clean);
+         border-bottom: 2px solid #929292;/* coloca a borda de baixo */
+         font-size: 28px;
+         padding: 2%;
+         transition: border-bottom 0.3s ease-in-out; 
+     }
+ 
+     /* cada label dos input acima */
+     .label-fora{
+         font-size: 22px;
+     }
+ 
+     /* cria mudança de cor da barra do input */
+     .inputUser:focus,
+     .inputUser:valid{  
+         border-bottom: 2px solid var(--rosa);
+     }
+ 
+ 
+     /* coloca uma transição no label */
+     .inputUser:focus ~ .label-fora,
+     .inputUser.valid ~ .label-fora {
+         font-size: 20px;
+     }
+     
+      
+ }
